@@ -18,7 +18,7 @@
 (require 'compile)
 (ido-mode t)
 (menu-bar-mode -1)
-(normal-erase-is-backspace-mode 1)
+(normal-erase-is-backspace-mode 0)
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 (setq column-number-mode t)
@@ -75,3 +75,7 @@
 (require 'jade-mode)    
 (add-to-list 'auto-mode-alist '("\\.styl$" . sws-mode))
 (add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
+
+;; Custom Mapping
+(define-key global-map [home] `beginning-of-line)
+(define-key global-map [end] `end-of-line)
